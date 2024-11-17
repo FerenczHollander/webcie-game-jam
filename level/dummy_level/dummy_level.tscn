@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=4 uid="uid://doe28ipywat7y"]
+[gd_scene load_steps=20 format=4 uid="uid://doe28ipywat7y"]
 
 [ext_resource type="PackedScene" uid="uid://d0253gx5hy0b2" path="res://level/level.tscn" id="1_t3i1a"]
 [ext_resource type="PackedScene" uid="uid://ruku00cytrpy" path="res://Player/dummy/dummy_player.tscn" id="2_45cvt"]
@@ -10,9 +10,10 @@
 [ext_resource type="PackedScene" uid="uid://s3hd6cflrl2p" path="res://MusicNote/music_note.tscn" id="6_5fw7c"]
 [ext_resource type="Texture2D" uid="uid://drqsoteysmg2j" path="res://assets/far city background/-2.png" id="6_77hoq"]
 [ext_resource type="Texture2D" uid="uid://bc5sjbas312bb" path="res://assets/far city background/-1.png" id="7_ixcyy"]
-[ext_resource type="PackedScene" uid="uid://xphyqo5ndarb" path="res://MusicNote/music_note2.tscn" id="7_qifgf"]
+[ext_resource type="PackedScene" uid="uid://50sd4i16rncw" path="res://MusicNote/music_note2.tscn" id="7_qifgf"]
 [ext_resource type="Texture2D" uid="uid://bhq3mviu0e6nf" path="res://MusicNote/pixilart-drawing.png" id="9_maim6"]
 [ext_resource type="Texture2D" uid="uid://die8wt3kova6m" path="res://MusicNote/pixilart-drawing (2).png" id="10_rqye6"]
+[ext_resource type="PackedScene" uid="uid://bbsecuarrl1v2" path="res://DeathPlane/death_plane.tscn" id="14_4npm4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ujlmo"]
 texture = ExtResource("9_maim6")
@@ -112,3 +113,7 @@ motion_mirroring = Vector2(600, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/-1" index="0"]
 texture = ExtResource("7_ixcyy")
+
+[node name="DeathPlane" parent="." index="6" instance=ExtResource("14_4npm4")]
+position = Vector2(380, 768)
+scale = Vector2(-4523.67, 1.69621)
