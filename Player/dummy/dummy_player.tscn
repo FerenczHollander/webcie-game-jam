@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://ruku00cytrpy"]
+[gd_scene load_steps=10 format=3 uid="uid://ruku00cytrpy"]
 
 [ext_resource type="PackedScene" uid="uid://3x6bph5wasye" path="res://Player/Player.tscn" id="1_4dt2w"]
 [ext_resource type="Script" path="res://Player/dummy/dummy_player.gd" id="2_8np4t"]
@@ -55,6 +55,9 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s6d3w"]
+size = Vector2(8, 7)
+
 [node name="CharacterBody2D" node_paths=PackedStringArray("animation_sprite") instance=ExtResource("1_4dt2w")]
 script = ExtResource("2_8np4t")
 animation_sprite = NodePath("AnimatedSprite2D")
@@ -65,3 +68,8 @@ sprite_frames = SubResource("SpriteFrames_qsqnv")
 
 [node name="CollisionShape2D" parent="." index="1"]
 position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_s6d3w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_s6d3w")
