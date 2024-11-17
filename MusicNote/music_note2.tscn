@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://50sd4i16rncw"]
+
+[ext_resource type="Texture2D" uid="uid://die8wt3kova6m" path="res://MusicNote/pixilart-drawing (2).png" id="1_nhfyo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lon7p"]
+size = Vector2(14.4716, 17.4906)
+
+[node name="MusicNote" type="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 0.5)
+rotation = -3.14159
+scale = Vector2(0.414606, -0.62891)
+shape = SubResource("RectangleShape2D_lon7p")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_nhfyo")
