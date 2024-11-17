@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=3 uid="uid://btyhk63h1tr5a"]
+
+[ext_resource type="PackedScene" uid="uid://ckfdyudx4c1up" path="res://Enemy/Enemy.tscn" id="1_lbe0r"]
+[ext_resource type="Script" path="res://Enemy/dummy/dummy_enemy.gd" id="2_scuf7"]
+[ext_resource type="Texture2D" uid="uid://33jig58jcqk4" path="res://assets/Transparent/Tilemap/tilemap_packed.png" id="2_utjlr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_btlg4"]
+atlas = ExtResource("2_utjlr")
+region = Rect2(32, 56, 8, 8)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_m2n0j"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_btlg4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Enemy" instance=ExtResource("1_lbe0r")]
+script = ExtResource("2_scuf7")
+
+[node name="AnimatedSprite2D" parent="." index="0"]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_m2n0j")
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(0, 0)
