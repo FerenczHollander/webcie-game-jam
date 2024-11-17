@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-
+var health = 3;
 const SPEED = 300.0
 const JUMP_VELOCITY_Start = -100.0
 const JUMP_VELOCITY = -120.0
@@ -29,10 +29,15 @@ func _physics_process(delta: float) -> void:
 		velocity.x = direction * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
-
 	
+	if (health <= 0):
+		killPlayer()
 	move_and_slide()
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	pass # Replace with function body.
+	if body.has_method("getDamage"):
+		health -= body.getDamge()
+		
+func killPlayer() -> void:
+	pass
