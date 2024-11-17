@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=4 uid="uid://doe28ipywat7y"]
+[gd_scene load_steps=10 format=4 uid="uid://doe28ipywat7y"]
 
 [ext_resource type="PackedScene" uid="uid://d0253gx5hy0b2" path="res://level/level.tscn" id="1_t3i1a"]
 [ext_resource type="Texture2D" uid="uid://cywy685hrv3u3" path="res://assets/far city background/-6.png" id="2_58s52"]
 [ext_resource type="PackedScene" uid="uid://3x6bph5wasye" path="res://Player/Player.tscn" id="2_j3bgr"]
+[ext_resource type="PackedScene" uid="uid://drsqlpeolv37d" path="res://Enemy/Enemy.tscn" id="3_0jbov"]
 [ext_resource type="Texture2D" uid="uid://bo4lepqdm8ear" path="res://assets/far city background/-5.png" id="3_f1wv5"]
 [ext_resource type="Texture2D" uid="uid://crw472ri6cqj6" path="res://assets/far city background/-4.png" id="4_unosn"]
 [ext_resource type="Texture2D" uid="uid://dr1ie872rjt6j" path="res://assets/far city background/-3.png" id="5_sgjaa"]
@@ -14,15 +15,19 @@
 [node name="Player" parent="." index="0" instance=ExtResource("2_j3bgr")]
 scale = Vector2(0.75, 0.75)
 
-[node name="Camera2D" parent="." index="1" node_paths=PackedStringArray("node_to_follow")]
+[node name="Enemy" parent="." index="1" instance=ExtResource("3_0jbov")]
+position = Vector2(1234, 371)
+scale = Vector2(0.5, 0.5)
+
+[node name="Camera2D" parent="." index="2" node_paths=PackedStringArray("node_to_follow")]
 anchor_mode = 0
 node_to_follow = NodePath("../Player")
 
-[node name="TileMapLayer" parent="." index="2"]
+[node name="TileMapLayer" parent="." index="3"]
 scale = Vector2(8, 8)
 tile_map_data = PackedByteArray("AAABAAcAAAAEAAIAAAACAAcAAAAEAAIAAAADAAcAAAAEAAIAAAAEAAcAAAAEAAIAAAAFAAcAAAAEAAIAAAAGAAcAAAAEAAIAAAAHAAcAAAAEAAIAAAAIAAcAAAAEAAIAAAAJAAcAAAAEAAIAAAAKAAcAAAAEAAIAAAALAAcAAAAEAAIAAAAMAAcAAAAEAAIAAAANAAcAAAAEAAIAAAAOAAcAAAAEAAIAAAAPAAcAAAAEAAIAAAAQAAcAAAAEAAIAAAARAAcAAAAEAAIAAAASAAcAAAAEAAIAAAATAAcAAAAEAAIAAAAUAAcAAAAEAAIAAAAVAAcAAAAEAAIAAAAWAAcAAAAEAAIAAAAXAAcAAAAEAAIAAAAYAAcAAAAEAAIAAAAZAAcAAAAEAAIAAAAaAAcAAAAEAAIAAAAbAAcAAAAEAAIAAAAcAAcAAAAEAAIAAAAdAAcAAAAEAAIAAAAeAAcAAAAEAAIAAAAfAAcAAAAEAAIAAAAgAAcAAAAEAAIAAAAhAAcAAAAEAAIAAAAiAAcAAAAEAAIAAAAjAAcAAAAEAAIAAAAkAAcAAAAEAAIAAAAlAAcAAAAEAAIAAAAmAAcAAAAEAAIAAAAnAAcAAAAEAAIAAAAoAAcAAAAEAAIAAAApAAcAAAAEAAIAAAAqAAcAAAAEAAIAAAArAAcAAAAEAAIAAAAsAAcAAAAEAAIAAAAtAAcAAAAEAAIAAAAuAAcAAAAEAAIAAAAvAAcAAAAEAAIAAAAwAAcAAAAEAAIAAAAxAAcAAAAEAAIAAAAyAAcAAAAEAAIAAAA=")
 
-[node name="ParallaxBackground" parent="." index="3"]
+[node name="ParallaxBackground" parent="." index="4"]
 offset = Vector2(600, 300)
 scale = Vector2(2, 2)
 transform = Transform2D(2, 0, 0, 2, 600, 300)
