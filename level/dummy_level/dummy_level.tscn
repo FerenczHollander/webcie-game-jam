@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://s3hd6cflrl2p" path="res://MusicNote/music_note.tscn" id="6_5fw7c"]
 [ext_resource type="Texture2D" uid="uid://drqsoteysmg2j" path="res://assets/far city background/-2.png" id="6_77hoq"]
 [ext_resource type="Texture2D" uid="uid://bc5sjbas312bb" path="res://assets/far city background/-1.png" id="7_ixcyy"]
-[ext_resource type="PackedScene" path="res://MusicNote/music_note2.tscn" id="7_qifgf"]
+[ext_resource type="PackedScene" uid="uid://xphyqo5ndarb" path="res://MusicNote/music_note2.tscn" id="7_qifgf"]
 [ext_resource type="Texture2D" uid="uid://bhq3mviu0e6nf" path="res://MusicNote/pixilart-drawing.png" id="9_maim6"]
 [ext_resource type="Texture2D" uid="uid://die8wt3kova6m" path="res://MusicNote/pixilart-drawing (2).png" id="10_rqye6"]
 

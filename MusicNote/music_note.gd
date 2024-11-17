@@ -1,7 +1,6 @@
 extends StaticBody2D
 
+var worth = 1
 
-
-func _on_area_2d_body_entered(body: Node2D) -> void:
-	if body.has_method("killPlayer"):
-		queue_free()
+func getGroints():
+	return worth

@@ -1,13 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://50sd4i16rncw"]
+[gd_scene load_steps=4 format=3 uid="uid://xphyqo5ndarb"]
 
+[ext_resource type="Script" path="res://MusicNote/music_note_2.gd" id="1_iatsv"]
 [ext_resource type="Texture2D" uid="uid://die8wt3kova6m" path="res://MusicNote/pixilart-drawing (2).png" id="1_nhfyo"]
-[ext_resource type="Script" path="res://MusicNote/music_note.gd" id="1_o8nuf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lon7p"]
 size = Vector2(14.4716, 17.4906)
 
 [node name="MusicNote" type="StaticBody2D"]
-script = ExtResource("1_o8nuf")
+script = ExtResource("1_iatsv")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1

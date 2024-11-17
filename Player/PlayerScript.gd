@@ -10,6 +10,7 @@ var JUMPFRAMES = 0;
 var gravity_modifier = 1.5
 var immunity_time = 3
 var isImmune = false
+var amount_of_groints = 0
 @export var animation_sprite: AnimatedSprite2D
 
 
@@ -55,6 +56,9 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		animation_sprite.modulate = Color.RED
 		await get_tree().create_timer(0.1).timeout
 		animation_sprite.modulate = Color.WHITE		
-		
+	if body.has_method("getGroints"):
+		amount_of_groints += body.getGroints()
+		print(amount_of_groints)
+		queue_free()
 func killPlayer() -> void:
 	pass
