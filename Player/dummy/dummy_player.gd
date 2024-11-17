@@ -1,7 +1,6 @@
 class_name DummyPlayer
 extends Player
 
-@export var animation_sprite: AnimatedSprite2D
 var jump_max = 2
 var jump_counter = 0
 

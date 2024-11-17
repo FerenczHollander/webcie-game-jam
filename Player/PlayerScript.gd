@@ -8,6 +8,10 @@ var JUMP_VELOCITY = -100.0
 var JUMPING = false;
 var JUMPFRAMES = 0;
 var gravity_modifier = 1.5
+var immunity_time = 3
+var isImmune = false
+@export var animation_sprite: AnimatedSprite2D
+
 
 func _physics_process(delta: float) -> void:
 	handle_movement(delta)
@@ -42,8 +46,15 @@ func handle_jump(delta: float) -> void:
 		JUMPFRAMES = 0
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
+	print("ahh")
 	if body.has_method("getDamage"):
-		health -= body.getDamge()
+		if velocity.y > 0:
+			body.queue_free()
+			return
+		health -= body.getDamage()
+		animation_sprite.modulate = Color.RED
+		await get_tree().create_timer(0.1).timeout
+		animation_sprite.modulate = Color.WHITE		
 		
 func killPlayer() -> void:
 	pass
