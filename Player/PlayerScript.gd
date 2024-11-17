@@ -11,9 +11,6 @@ var JUMPFRAMES = 0;
 func _physics_process(delta: float) -> void:
 	handle_movement(delta)
 
-func _on_area_2d_body_entered(body: Node2D) -> void:
-	pass # Replace with function body.
-
 func handle_movement(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
