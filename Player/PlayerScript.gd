@@ -57,4 +57,4 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		animation_sprite.modulate = Color.WHITE		
 		
 func killPlayer() -> void:
-	pass
+	get_tree().change_scene_to_file("res://GameOver/game_over.tscn")

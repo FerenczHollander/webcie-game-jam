@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://c1xksdclvmqeo"]
+
+[ext_resource type="Texture2D" uid="uid://qx5owaj8cptp" path="res://GameOver/Game over.jpg" id="1_31lp5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nmacm"]
+size = Vector2(8, 7)
+
+[node name="GameOver" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(487, 262)
+scale = Vector2(0.565907, 0.723467)
+texture = ExtResource("1_31lp5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_nmacm")
