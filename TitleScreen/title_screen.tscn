@@ -1,0 +1,33 @@
+[gd_scene load_steps=2 format=3 uid="uid://cpwog3xyr3hwe"]
+
+[ext_resource type="Script" path="res://TitleScreen/title_screen.gd" id="1_v41ay"]
+
+[node name="Title Screen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_v41ay")
+
+[node name="Start" type="Button" parent="."]
+layout_mode = 0
+offset_left = 347.0
+offset_top = 303.0
+offset_right = 393.0
+offset_bottom = 334.0
+scale = Vector2(5.95435, 5.02128)
+text = "Start"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 197.0
+offset_top = 46.0
+offset_right = 357.0
+offset_bottom = 69.0
+scale = Vector2(3.93948, 8.24813)
+text = "FRED REDT BESTUUR"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
