@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://tvsvo7a4timc"]
+
+[ext_resource type="PackedScene" uid="uid://pi71c8f48ib1" path="res://Collectibles/music_notes/music_note.tscn" id="1_uwyo1"]
+[ext_resource type="Script" path="res://Collectibles/music_notes/quarter_note.gd" id="2_auqu1"]
+[ext_resource type="Texture2D" uid="uid://bhq3mviu0e6nf" path="res://Collectibles/music_notes/pixilart-drawing.png" id="3_r83ww"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1wdfu"]
+size = Vector2(6, 11)
+
+[node name="Area2D" instance=ExtResource("1_uwyo1")]
+script = ExtResource("2_auqu1")
+
+[node name="Sprite2D" parent="." index="0"]
+texture_filter = 1
+position = Vector2(1.5, 0)
+scale = Vector2(0.9375, 1)
+texture = ExtResource("3_r83ww")
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_1wdfu")

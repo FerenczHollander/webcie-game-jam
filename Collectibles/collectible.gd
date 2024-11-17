@@ -1,4 +1,5 @@
-extends StaticBody2D
+class_name Collectible
+extends Area2D
 
 var worth = 1
 

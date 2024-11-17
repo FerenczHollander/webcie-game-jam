@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://die8wt3kova6m"
-path="res://.godot/imported/pixilart-drawing (2).png-2e307b8865f22b2666af6f7bb1d30221.ctex"
+uid="uid://bhq3mviu0e6nf"
+path="res://.godot/imported/pixilart-drawing.png-5ec087de5d620076bb592165b998a517.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://MusicNote/pixilart-drawing (2).png"
-dest_files=["res://.godot/imported/pixilart-drawing (2).png-2e307b8865f22b2666af6f7bb1d30221.ctex"]
+source_file="res://Collectibles/music_notes/pixilart-drawing.png"
+dest_files=["res://.godot/imported/pixilart-drawing.png-5ec087de5d620076bb592165b998a517.ctex"]
 
 [params]
 

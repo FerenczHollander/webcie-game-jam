@@ -56,9 +56,12 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		animation_sprite.modulate = Color.RED
 		await get_tree().create_timer(0.1).timeout
 		animation_sprite.modulate = Color.WHITE		
-	if body.has_method("getGroints"):
-		amount_of_groints += body.getGroints()
-		print(amount_of_groints)
-		queue_free()
 func killPlayer() -> void:
 	get_tree().change_scene_to_file("res://GameOver/game_over.tscn")
+
+
+func _on_area_2d_area_entered(area: Area2D) -> void:
+	if area.has_method("getGroints"):
+		amount_of_groints += area.getGroints()
+		print(amount_of_groints)
+		area.queue_free()
