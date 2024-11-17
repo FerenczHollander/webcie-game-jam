@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=4 uid="uid://doe28ipywat7y"]
+[gd_scene load_steps=10 format=4 uid="uid://doe28ipywat7y"]
 
 [ext_resource type="PackedScene" uid="uid://d0253gx5hy0b2" path="res://level/level.tscn" id="1_t3i1a"]
 [ext_resource type="Texture2D" uid="uid://cywy685hrv3u3" path="res://assets/far city background/-6.png" id="2_58s52"]
@@ -7,6 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://dr1ie872rjt6j" path="res://assets/far city background/-3.png" id="5_sgjaa"]
 [ext_resource type="Texture2D" uid="uid://drqsoteysmg2j" path="res://assets/far city background/-2.png" id="6_77hoq"]
 [ext_resource type="Texture2D" uid="uid://bc5sjbas312bb" path="res://assets/far city background/-1.png" id="7_ixcyy"]
+[ext_resource type="PackedScene" uid="uid://3x6bph5wasye" path="res://Player/Player.tscn" id="8_bgyd2"]
+[ext_resource type="PackedScene" uid="uid://drsqlpeolv37d" path="res://Enemy/character_body_2d.tscn" id="9_n63kb"]
 
 [node name="Level" instance=ExtResource("1_t3i1a")]
 
@@ -54,3 +56,9 @@ texture = ExtResource("7_ixcyy")
 [node name="TileMapLayer" parent="." index="1"]
 scale = Vector2(8, 8)
 tile_map_data = PackedByteArray("AAABAAcAAAAEAAIAAAACAAcAAAAEAAIAAAADAAcAAAAEAAIAAAAEAAcAAAAEAAIAAAAFAAcAAAAEAAIAAAAGAAcAAAAEAAIAAAAHAAcAAAAEAAIAAAAIAAcAAAAEAAIAAAAJAAcAAAAEAAIAAAAKAAcAAAAEAAIAAAALAAcAAAAEAAIAAAAMAAcAAAAEAAIAAAANAAcAAAAEAAIAAAAOAAcAAAAEAAIAAAAPAAcAAAAEAAIAAAAQAAcAAAAEAAIAAAARAAcAAAAEAAIAAAA=")
+
+[node name="Player" parent="." index="2" instance=ExtResource("8_bgyd2")]
+position = Vector2(611.896, 217.075)
+
+[node name="Enemy" parent="." index="3" instance=ExtResource("9_n63kb")]
+position = Vector2(1080, 337)

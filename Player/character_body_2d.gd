@@ -3,7 +3,7 @@ extends CharacterBody2D
 
 const SPEED = 300.0
 const JUMP_VELOCITY_Start = -100.0
-const JUMP_VELOCITY = -80.0
+const JUMP_VELOCITY = -120.0
 var JUMPING = false;
 var JUMPFRAMES = 0;
 
